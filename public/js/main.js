@@ -2,6 +2,10 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const feedback = document.getElementById('feedback');
+const message = document.getElementById('msg');
+
+
 
 // Get username and room from URL
 const { username, room } = Qs.parse(location.search, {
@@ -53,6 +57,7 @@ function outputMessage(message) {
   </p>`;
   document.querySelector('.chat-messages').appendChild(div);
 }
+
 
 // Add room name to DOM
 function outputRoomName(room) {
